@@ -1,0 +1,24 @@
+
+.header__nav{
+  position: relative;
+  flex: 1 1 auto;
+}
+
+
+.main-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.menu-item{
+  flex: 1 1 auto;
+  padding: 10rem;
+  font-size: 26rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+  font-variant: all-small-caps;
+}

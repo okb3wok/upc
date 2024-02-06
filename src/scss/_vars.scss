@@ -1,0 +1,22 @@
+
+html, html[theme="normal"] {
+  --title-color: #1d70b8;
+}
+
+
+html[theme="special"] {
+
+}
+
+:root {
+  --main-radius: 10rem;
+  --wrapper-padding: 150rem;
+  --page-padding: 30rem;
+  --font-size: 18rem;
+  --font-family: 'Roboto', system-ui, 'Open Sans', sans-serif;
+  --line-height: 1.55;
+
+  @include devices(mobile){
+    --font-size: 14rem;
+  }
+}

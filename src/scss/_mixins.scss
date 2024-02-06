@@ -1,0 +1,18 @@
+// We define the mixins for two major breakpoints mobile and tablet
+// $breakpoint is the variable that can have several values
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+
+  @if $breakpoint == tablet {
+    @media all and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media all and (max-width: 718px) {
+      @content;
+    }
+  }
+}
+
+

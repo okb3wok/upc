@@ -1,0 +1,16 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  padding: 0 var(--gw-wrapper-padding);
+}
