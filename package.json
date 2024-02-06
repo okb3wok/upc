@@ -1,0 +1,11 @@
+{
+  "name": "upc",
+  "version": "1.0.0",
+  "description": "Training and production center site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js"
+  },
+  "author": "me",
+  "license": "ISC"
+}
