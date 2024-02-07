@@ -12,11 +12,11 @@
     font-weight: 500;
 
     &:hover svg g path{
-      fill: black;
+      fill: var(--meta-color);
     }
 
     &:hover &__title{
-      color: #000000;
+      color: var(--meta-color);
 
     }
 
@@ -30,7 +30,7 @@
       font-size: 15rem;
 
       font-variant: all-small-caps;
-      color: #1d70b8;
+      color: var(--title-color);
     }
 
   }
@@ -38,25 +38,24 @@
   &>.wrapper{
     display: flex;
     padding: var(--page-padding);
+    position: relative;
   }
 
 
-
-
-
   &__search{
-    flex: 0 1 auto;
+    //flex: 0 1 auto;
     align-self: center;
     padding: 10rem;
-    margin-right: 20rem;
-    position: relative;
+    margin-right: 26rem;
+    position: absolute;
+    right: calc(var(--page-padding) + 140rem);
 
-    &>input {
+    &> input {
       position: absolute;
-      border: 3px solid #000000;
+      border: 2px solid var(--meta-color);
       right:-4rem;
       top:-1rem;
-      background: aliceblue;
+      background: var(--page-bg-color);
       padding: 20rem 10rem;
 
       &.hidden {
@@ -65,18 +64,18 @@
     }
 
 
-    &>button{
+    &> button{
       cursor: pointer;
       box-sizing: border-box;
       position: relative;
       display: block;
       width: 40px;
       height: 40px;
-      border: 5px solid;
+      border: 5px solid var(--meta-color);
       border-radius: 50%;
     }
 
-    &>button::after {
+    &> button::after {
       content: "";
       display: block;
       box-sizing: border-box;
@@ -84,7 +83,7 @@
       border-radius: 3px;
       width: 5px;
       height: 20px;
-      background: currentColor;
+      background: var(--meta-color);
       transform: rotate(-45deg);
       top: 25px;
       left: 30px
@@ -92,13 +91,14 @@
   }
 
   &__theme-switch{
-    flex: 0 1 auto;
+    //flex: 0 1 auto;
     align-self: center;
 
     margin-right: 20rem;
+    position: absolute;
+    right: calc(var(--page-padding) + 60rem);
 
-
-    &>label {
+    &> label {
 
       display: block;
       height: 40px;
@@ -111,17 +111,17 @@
 
       & .slider {
         display: block;
-        background-color: var(--gw-bg-color);
+        background-color: var(--page-bg-color);
         cursor: pointer;
         position: absolute;
         inset: 0;
-        border: 3px solid #000000;
+        border: 3px solid var(--meta-color);
         transition: .4s;
 
       }
 
       & .slider:before {
-        background-color: #000000;
+        background-color: var(--meta-color);
         bottom: 4px;
         content: "";
         height: 26px;
@@ -142,7 +142,7 @@
       }
 
       & input:checked + .slider:after {
-        content: "🙂️";
+        content: "";
         right: auto;
         left: 7px;
         font-size: 16px;
@@ -164,9 +164,11 @@
   }
 
   &__menu-toggle{
-    flex: 0 1 auto;
+    //flex: 0 1 auto;
     align-self: center;
-
+    position: absolute;
+    right: var(--page-padding);
+    z-index: 2;
 
     &>button{
       width: 60px;
@@ -181,7 +183,7 @@
         position: absolute;
         height: 5px;
         width: 100%;
-        background: #000000;
+        background: var(--meta-color);
         border-radius: 2px;
         opacity: 1;
         left: 0;

@@ -2,7 +2,41 @@
 .header__nav{
   position: relative;
   flex: 1 1 auto;
+  margin-right: 220rem;
+
+  @include devices(mobile){
+    display: none;
+  }
+  &.extended{
+    display: block;
+    position: absolute;
+    background: var(--page-bg-color);
+    top: 0;
+    left:0;
+    right: 0;
+    margin-top: 140rem;
+    z-index: 2;
+    margin-right: 0;
+    border: 2px solid var(--meta-color);
+
+    &::before{
+      content: '';
+      position: absolute;
+      border-width: 2px 2px 0 2px;
+      border-style: solid;
+      border-color: var(--meta-color);
+      right: 20rem;
+      top: -92rem;
+      width: 76rem;
+      height: 92rem;
+      background: var(--page-bg-color);
+    }
+  }
+
 }
+
+
+
 
 
 .main-menu{
@@ -21,4 +55,5 @@
   text-align: center;
   word-break: break-word;
   font-variant: all-small-caps;
+  color: var(--meta-color);
 }

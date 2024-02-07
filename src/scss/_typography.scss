@@ -6,14 +6,18 @@ dd, ol, ul{
   margin-bottom: var(--gw-font-size);
 }
 
+
 p {
   margin-bottom: var(--font-size);
-  letter-spacing: calc(var(--gw-font-size)*0.3);
+}
 
+strong {
+  font-weight: calc(var(--font-weight) + 300);
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Roboto', sans-serif; font-weight: 600;
+  font-family: var(--font-family);
+  font-weight: calc(var(--font-weight) + 300);
   color: var(--title-color);
   word-break: break-word;
 }
@@ -55,7 +59,6 @@ h6 {
 }
 
 img, svg{
-
   max-width: 100%;
   height: auto;
   display: block;

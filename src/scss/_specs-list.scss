@@ -1,0 +1,29 @@
+.specs-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__item{
+
+    flex: 1 1 auto;
+    max-width: 300rem;
+    width: 100%;
+    font-size: calc(var(--font-size)*1.1);
+    margin-bottom: 20rem;
+    color: var(--gray-color);
+    & span {
+      color: var(--font-color);
+    }
+    & a{
+      display: block;
+      border-radius: var(--main-radius);
+      padding: 10rem ;
+
+
+      &:hover {
+        box-shadow: 0 0 5px var(--blur-color);
+      }
+    }
+
+
+  }
+}

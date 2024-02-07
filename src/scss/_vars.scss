@@ -1,20 +1,38 @@
 
 html, html[theme="normal"] {
-  --title-color: #1d70b8;
+
+  --font-color: #000000;
+  --font-color-inverted:#ffffff;
+  --title-color: #122090;
+  --prime-color: #1e24ef;
+  --secondary-color: #6F00AF;
+
+  --meta-color: #122090;
+  --site-bg-color: #bbbbbb;
+  --page-bg-color: #ffffff;
+  --link-color: #2d8cdc;
+  --blur-color: rgba(0, 0, 0, 0.49);
+
 }
 
+html[theme="special-black-on-white"] {
 
-html[theme="special"] {
+}
+
+html[theme="special-black-on-white"] {
 
 }
 
 :root {
-  --main-radius: 10rem;
+  --gray-color: #a8a8a8;
+  --main-radius: 5rem;
   --wrapper-padding: 150rem;
   --page-padding: 30rem;
   --font-size: 18rem;
   --font-family: 'Roboto', system-ui, 'Open Sans', sans-serif;
   --line-height: 1.55;
+  --letter-spacing: 0.2rem;
+  --font-weight: 300;
 
   @include devices(mobile){
     --font-size: 14rem;
