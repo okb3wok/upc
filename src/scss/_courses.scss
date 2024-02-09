@@ -1,0 +1,49 @@
+.courses {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  &__item{
+    flex: 1 1 auto;
+    max-width: 300rem;
+    width: 100%;
+    font-size: calc(var(--font-size)*1.1);
+    margin-bottom: 20rem;
+    color: var(--gray-color);
+
+    & a{
+      text-decoration: none;
+      display: block;
+      border-radius: var(--main-radius);
+
+      padding-bottom: 10rem;
+      position: relative;
+      text-align: center;
+      height: 100%;
+
+      &:hover {
+        box-shadow: 0 0 15px var(--gray-color);
+      }
+
+
+
+      &>img {
+        border-radius: var(--main-radius);
+        margin-bottom: 10rem;
+      }
+    }
+
+
+  }
+
+
+  &__item-title{
+    color: var(--font-color);
+    font-weight: calc(var(--font-weight) + 100);
+  }
+
+  &__item-cod{
+    color: var(--gray-color);
+  }
+}

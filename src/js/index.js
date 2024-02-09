@@ -120,3 +120,44 @@ headerSearchButton.addEventListener('click', ()=>{
 
 
 console.log(initialState);
+
+
+
+//---
+// To top
+//---
+
+const fadeIn = (el, timeout, display) => {
+  el.style.opacity = 0;
+  el.style.display = display || 'block';
+  el.style.transition = `opacity ${timeout}ms`;
+  setTimeout(() => {
+    el.style.opacity = 1;
+  }, timeout);
+};
+
+const fadeOut = (el, timeout) => {
+  el.style.opacity = 1;
+  el.style.transition = `opacity ${timeout}ms`;
+  el.style.opacity = 0;
+
+
+    el.style.display = 'none';
+
+};
+
+
+
+
+let toTop = document.getElementById('totop');
+window.addEventListener('scroll',(el)=>{
+  if (window.scrollY > 220) {
+    toTop.classList.replace('hide', 'show');
+  }else {
+    toTop.classList.replace('show', 'hide');
+  }
+})
+
+toTop.addEventListener('click',()=>{
+  window.scrollTo({top: 0, behavior: 'smooth'});
+})

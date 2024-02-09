@@ -1,11 +1,23 @@
 .content{
   flex: 1 1 auto;
   width:100%;
+  padding: 0 var(--page-padding);
+
+  @include devices(tablet){
+    padding: 0;
+  }
+
 
   &> .wrapper{
     padding: 0;
     background: var(--page-bg-color);
     letter-spacing: var(--letter-spacing);
+    border-radius: calc(var(--main-radius) * 5);
+    min-height: 900px;
+    @include devices(tablet){
+      border-radius: 0;
+    }
+
   }
 
 }

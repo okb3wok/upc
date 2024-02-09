@@ -1,17 +1,17 @@
 
 html, html[theme="normal"] {
 
-  --font-color: #000000;
+  --font-color: #333333;
   --font-color-inverted:#ffffff;
-  --title-color: #122090;
+  --title-color: #444444;
   --prime-color: #1e24ef;
   --secondary-color: #6F00AF;
 
   --meta-color: #122090;
   --site-bg-color: #bbbbbb;
   --page-bg-color: #ffffff;
-  --link-color: #2d8cdc;
-  --blur-color: rgba(0, 0, 0, 0.49);
+  --link-color: #004593;
+  --blur-color: rgba(0, 0, 0, 0.25);
 
 }
 
@@ -26,9 +26,8 @@ html[theme="special-black-on-white"] {
 :root {
   --gray-color: #a8a8a8;
   --main-radius: 5rem;
-  --wrapper-padding: 150rem;
   --page-padding: 30rem;
-  --font-size: 18rem;
+  --font-size: 22rem;
   --font-family: 'Roboto', system-ui, 'Open Sans', sans-serif;
   --line-height: 1.55;
   --letter-spacing: 0.2rem;

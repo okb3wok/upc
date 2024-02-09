@@ -7,16 +7,17 @@
   font-weight: var(--font-weight);
   min-height: 100vh;
   //background: linear-gradient(0deg, rgba(208, 208, 208, 0) 5%, rgba(255, 255, 255, 0) 55%), url('../static/bg.jpg') var(--site-bg-color);
-  background: var(--site-bg-color);
+  background: linear-gradient(135deg, rgba(179, 212, 255, 0.31) 0%, rgb(249, 251, 255) 100%);
+  //background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
   //background-size: cover;
   //background-repeat: no-repeat;
   //background-attachment: fixed;
+  overflow-x: hidden;
+
 }
 
 .wrapper{
   margin: 0 auto;
   max-width: 1500px;
   width: 100%;
-  padding: 0 var(--wrapper-padding);
-
 }

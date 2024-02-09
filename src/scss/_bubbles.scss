@@ -1,0 +1,32 @@
+@keyframes blobby {
+  0% {
+    opacity:.5
+  }
+  to {
+    opacity:1
+  }
+}
+
+.bubble1 {
+  position:absolute;
+  top:-370px;
+  pointer-events:none;
+  right:-200px;
+
+  //border: 1px solid red;
+  /*! width:1000px; */
+  height:1000px;
+  animation:blobby 8s ease-in-out alternate infinite;
+  z-index: -1;
+
+}
+
+.bubble2 {
+  pointer-events:none;
+  position:absolute;
+  top:0;
+  left:0;
+  animation:blobby 8s ease-in-out alternate infinite;
+  z-index: -1;
+
+}

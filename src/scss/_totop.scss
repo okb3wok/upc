@@ -1,0 +1,49 @@
+
+#totop {
+  width:60px;
+  height:60px;
+  font-size: calc(var(--font-size) * 1.5);
+  text-align: center;
+  cursor:pointer;
+  background-color: var(--blur-color);
+  border-radius: var(--main-radius);
+  color: var(--page-bg-color);
+  position: fixed;
+  right: var(--page-padding);
+  bottom: 70px;
+  z-index: 999;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span{
+    display: block;
+    padding-bottom: 8px;
+  }
+
+  &.show {
+    transition: opacity 400ms;
+  }
+  &.hide {
+    opacity: 0;
+  }
+
+
+  @include devices(mobile) {
+    transition: none;
+  }
+
+
+  &:hover, &:active {
+    color:var(--prime-color);
+    transition: none;
+  }
+
+  &:focus{
+    color: var(--page-bg-color);
+    transition: none;
+  }
+
+
+}
