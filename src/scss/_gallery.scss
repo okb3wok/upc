@@ -1,0 +1,21 @@
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-gap: 15px;
+  margin-bottom: var(--page-padding);
+
+  @include devices(tablet){
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  @include devices(mobile){
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  & .gallery-item {
+
+  }
+}
