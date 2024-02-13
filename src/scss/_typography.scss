@@ -78,3 +78,21 @@ a {
   color: var(--link-color);
   text-decoration: underline;
 }
+
+
+.upc-button {
+  @include button($color: white, $bg: var(--prime-color), $bghover: var(--secondary-color), $radius:var(--main-radius));
+}
+
+.upc-input {
+  display: inline-block;
+  width: 100%;
+  padding: 10rem 20rem;
+  border-radius: var(--main-radius);
+  margin-bottom: 20rem;
+  border: 2px solid var(--gray-color);
+}
+
+.input-left {
+  text-align: left;
+}

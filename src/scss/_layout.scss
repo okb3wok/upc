@@ -13,11 +13,13 @@
   //background-repeat: no-repeat;
   //background-attachment: fixed;
   overflow-x: hidden;
-
+  line-height: var(--line-height);
+  min-width: 350rem;
 }
 
 .wrapper{
   margin: 0 auto;
   max-width: 1500px;
   width: 100%;
+
 }

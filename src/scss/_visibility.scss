@@ -1,9 +1,10 @@
 .visibility{
 
   &>.wrapper {
-    border-width: 0 2rem 2rem 2rem;
+    border-width: 0 1rem 1rem 1rem;
     border-style: solid;
     border-color: var(--meta-color);
+    border-radius: 0 0 var(--main-radius) var(--main-radius);
     padding: 20rem;
     background-color: var(--page-bg-color);
     position: relative;
@@ -13,14 +14,24 @@
 
         content: '';
         position: absolute;
-        border-width: 0 2px 2px 2px;
+        border-width: 0 1px 1px 1px;
         border-style: solid;
         border-color: var(--meta-color);
-        right: 101rem;
-        bottom: -110rem;
-        width: 84rem;
-        height: 110rem;
+        border-radius: 0 0 var(--main-radius) var(--main-radius);
+        right: calc(var(--page-padding) * 0.75);
+        bottom: -106rem;
+        width: 74rem;
+        height: 106rem;
         background: var(--page-bg-color);
+
+
+      @include devices(mobile){
+        right: calc(var(--page-padding)* 0.75 + 52rem);
+        bottom: -74rem;
+        width: 74rem;
+        height: 74rem;
+      }
+
 
     }
 

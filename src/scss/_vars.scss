@@ -11,6 +11,7 @@ html, html[theme="normal"] {
   --site-bg-color: #bbbbbb;
   --page-bg-color: #ffffff;
   --link-color: #004593;
+  --link-color-hover:#004593;
   --blur-color: rgba(0, 0, 0, 0.25);
 
 }
@@ -34,6 +35,7 @@ html[theme="special-black-on-white"] {
   --font-weight: 300;
 
   @include devices(mobile){
-    --font-size: 14rem;
+    --font-size: 18rem;
+    --page-padding: 14rem;
   }
 }

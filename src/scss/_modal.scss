@@ -1,8 +1,38 @@
 .modal{
   position: absolute;
   inset: 0;
-  z-index: 1;
   background: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container{
+    //z-index: 1;
+    max-width: 640rem;
+    max-height: 90vh;
+    height: 100%;
+    width: 100%;
+    margin:15rem;
+    position: relative;
+    background: var(--page-bg-color);
+    padding: 100rem var(--page-padding);
+    border-radius: var(--main-radius);
+    box-shadow: 0 0 15rem var(--blur-color);
+    text-align: center;
+  }
+
+  &__close{
+
+    cursor: pointer;
+    position: absolute;
+    right: var(--page-padding);
+
+    top: var(--page-padding);
+  }
+
+  &__content{
+    z-index: 2;
+  }
 
   &_hidden{
     display: none;
