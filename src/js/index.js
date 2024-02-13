@@ -9,10 +9,31 @@ import order from './order.js'
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
+
+
+    const store = (state, newPair) => {
+        localStorage.upc = JSON.stringify({...state, ...newPair});
+        console.log({...state, ...newPair});
+        return JSON.parse(localStorage.upc);
+    }
+
+
+    let state = initialState;
+    if(localStorage.upc!== undefined){
+        state = JSON.parse(localStorage.upc);
+    }else{
+        localStorage.upc = JSON.stringify({...state, rehydrated:true});
+    }
+
+
+
     toTop.init();
     menuToggle.init();
     themeSwitcher.init();
-    headerSearch.init();
+    headerSearch.init(state, store);
     order.init();
+
+
+
 });
 

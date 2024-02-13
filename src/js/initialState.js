@@ -4,5 +4,6 @@ export const initialState = {
   mobileWidth: 718,
   theme: "no-preference",
   rehydrated: false,
-  visits:0
+  visits:0,
+  isSearchOpen:false
 };

@@ -63,24 +63,30 @@
   }
 
 
-  &__search{
+  &__search {
     //flex: 0 1 auto;
     align-self: center;
     position: absolute;
 
     right: calc(var(--page-padding) + 90rem);
 
-    @include devices(mobile){
-      right: calc(var(--page-padding) + 132rem);
+    @include devices(mobile) {
+      right: calc(var(--page-padding) + 136rem);
     }
+
+
+
 
     &> input {
       position: absolute;
       border: 1px solid var(--meta-color);
-      right:-4rem;
-      top:-1rem;
+      border-radius: var(--main-radius);
+      right:-14rem;
+      top:-8rem;
       background: var(--page-bg-color);
-      padding: 20rem 10rem;
+      padding: 7rem 40rem 7rem 15rem;
+
+      height: 50rem;
 
       &.hidden {
         display: none;
