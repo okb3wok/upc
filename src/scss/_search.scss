@@ -1,0 +1,47 @@
+.upc-search-form{
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--page-padding);
+
+  input {
+    height: 60rem;
+    font-size: var(--font-size);
+  }
+
+  input[type=search] {
+    flex: 1 1 auto;
+    border-width: 1px 0 1px 1px ;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    border-radius: var(--main-radius) 0 0 var(--main-radius);
+    margin-right: calc(-1 * var(--main-radius));
+    padding: 0 10rem;
+    background-color: var(--page-bg-color);
+    width: 100%;
+  }
+
+  input[type=search]:focus {
+    border-color: var(--prime-color);
+    outline:none;
+  }
+
+  input[type=submit] {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    flex: 0 1 auto;
+    text-align: center;
+    min-width: 80rem;
+    border-radius: var(--main-radius);
+    font-variant: all-small-caps;
+    cursor: pointer;
+    background-color: #eee;
+  }
+
+  input[type=submit]:hover {
+    color: var(--prime-color);
+    border-color: var(--prime-color);
+    background-color: #e3e3e3;
+  }
+
+}

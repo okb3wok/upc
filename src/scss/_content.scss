@@ -20,7 +20,7 @@
     }
 
     @include devices(mobile){
-      min-height: unset;
+      min-height: 450px;
     }
 
   }

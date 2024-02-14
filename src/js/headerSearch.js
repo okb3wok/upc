@@ -10,11 +10,14 @@ export default {
       return;
     }
 
+
+
     let headerSearchInput = document.getElementById('header-search-input');
 
     state = store(state, {isSearchOpen:false});
 
     headerSearchButton.addEventListener('click', ()=>{
+
       headerSearchInput.classList.remove('hidden');
 
       if(state.searchingText !==undefined){
@@ -27,24 +30,29 @@ export default {
         state = store(state, {isSearching:true});
         state = store(state, {isSearchOpen:false});
         headerSearchInput.classList.add('hidden');
-
+        window.location.replace(state.urlSite +'/?s=' + headerSearchInput.value.replace(' ', '+'));
       }else{
         state = store(state, {isSearchOpen:true});
         headerSearchInput.focus();
+        document.body.addEventListener('click',(el)=>{
+          if(headerSearchInput.contains(el.target) || headerSearchButton.contains(el.target)){
+          }else{
+            state = store(state, {isSearchOpen:false});
+            headerSearchInput.classList.add('hidden');
+          }
+        });
       }
-
 
       headerSearchInput.addEventListener('input',()=>{
         state = store(state, {searchingText:headerSearchInput.value}); //.replace(/"/g, '&quot;').replace(/'/g, '&apos;')
       });
 
-
       headerSearchInput.addEventListener('keydown',(event)=>{
-
         if(event.key === 'Enter'){
           state = store(state, {isSearching:true});
           state = store(state, {isSearchOpen:false});
           headerSearchInput.classList.add('hidden');
+          window.location.replace(state.urlSite +'/?s=' + headerSearchInput.value.replace(' ', '+'));
         }
 
         if(event.key === 'Escape'){
