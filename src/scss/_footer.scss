@@ -1,11 +1,12 @@
 .footer{
     margin-top: var(--page-padding);
-    background: #eff5f9;
+    background: var(--footer-bg);
     flex: 0 1 auto;
     width: 100%;
     border-width: 1px 0 0 0;
     border-style: solid;
     border-color: #eaeff5;
+    color: var(--footer-text-color);
 
     @include devices(tablet){
         margin-top: 0;
@@ -23,7 +24,6 @@
     &-main{
         flex: 1 1 auto;
 
-        color: #5d5d5d;
     }
 
     &-aside{

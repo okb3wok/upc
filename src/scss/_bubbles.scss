@@ -12,7 +12,7 @@
   top:-370px;
   pointer-events:none;
   right:-200px;
-
+  opacity:.5;
   @include devices(mobile){
     display: none;
   }
@@ -20,7 +20,7 @@
 
   /*! width:1000px; */
   height:1000px;
-  animation:blobby 8s ease-in-out alternate infinite;
+  //animation:blobby 8s ease-in-out alternate infinite;
   z-index: -1;
 
 
@@ -29,9 +29,10 @@
 .bubble2 {
   pointer-events:none;
   position:absolute;
+  opacity:.5;
   top:0;
   left:0;
-  animation:blobby 8s ease-in-out alternate infinite;
+  //animation:blobby 8s ease-in-out alternate infinite;
   z-index: -1;
   @include devices(mobile){
     display: none;

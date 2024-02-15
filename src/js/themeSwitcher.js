@@ -1,22 +1,42 @@
 export default {
-  init() {
+  init(state,store) {
 
     let themeSwitcher = document.getElementById('theme-switcher');
+
+
+    const deleteGradient = () =>{
+      document.querySelector('.bubble1').style.display = 'none';
+      document.querySelector('.bubble2').style.display = 'none';
+      document.querySelector('.header-branding__logo svg :nth-child(2) path').style.fill='var(--meta-color)';
+      document.querySelector('.header-branding__logo svg :nth-child(3) path').style.fill='var(--meta-color)';
+    }
 
     if (!themeSwitcher) {
       console.log('Нет элемента themeSwitcher');
       return;
     }
 
+    if(state.theme !==undefined){
+      document.documentElement.setAttribute('theme', state.theme);
+
+      if(state.theme ==='default-settings' || state.theme ==='no-preference'){
+
+      }else {
+        deleteGradient();
+      }
+    }
+
     themeSwitcher.addEventListener('click', ()=>{
 
 
       if(document.querySelectorAll(".visibility").length < 1){
+
+
+        let theme = 'default-settings'; //Тема по умолчанию
+
         const visibilityTemplate = document.querySelector("#visibility");
         const clone = visibilityTemplate.content.cloneNode(true);
         document.body.prepend(clone);
-
-
         let imgSwitcher = document.getElementById('img-switcher');
         imgSwitcher.addEventListener('change', ()=>{
           let images = document.querySelectorAll('img');
@@ -68,17 +88,33 @@ export default {
 
             colorButtons.forEach((el)=>{
               el.classList.remove('chose');
+
+              deleteGradient();
             })
 
-            if(el.target.classList.contains('black-on-white')){
+            if(el.target.classList.contains('default-settings')){
+              theme = 'default-settings';
+              el.target.classList.add('chose');
+              document.querySelector('.bubble1').style.display = 'block';
+              document.querySelector('.bubble2').style.display = 'block';
+              document.querySelector('.header-branding__logo svg :nth-child(2) path').style.fill='url(#gradient1)';
+              document.querySelector('.header-branding__logo svg :nth-child(3) path').style.fill='url(#gradient2)';
+            }else if(el.target.classList.contains('black-on-white')){
+              theme = 'black-on-white';
               el.target.classList.add('chose');
             }else if(el.target.classList.contains('white-on-black')){
+              theme = 'white-on-black';
               el.target.classList.add('chose');
             }else if(el.target.classList.contains('navy-on-blue')){
+              theme = 'navy-on-blue';
               el.target.classList.add('chose');
             }else if(el.target.classList.contains('green-on-brown')){
+              theme = 'green-on-brown';
               el.target.classList.add('chose');
             }
+
+            state = store(state, {theme:theme});
+            document.documentElement.setAttribute('theme', theme);
 
           }
 

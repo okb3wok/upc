@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     toTop.init();
     menuToggle.init();
-    themeSwitcher.init();
+    themeSwitcher.init(state, store);
     headerSearch.init(state, store);
     order.init();
 

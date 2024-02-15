@@ -4,7 +4,7 @@
   width:100%;
 
   & a {
-    text-decoration: none;
+    text-decoration: var(--link-decoration);
   }
 
   &-branding{
@@ -49,7 +49,7 @@
       font-variant: all-small-caps;
       font-weight: calc(var(--font-weight) + 200);
       color: var(--meta-color);
-      background: -webkit-linear-gradient(0deg, var(--prime-color) 30%, var(--secondary-color) 90%);
+      background: var(--title-branding-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

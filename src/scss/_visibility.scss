@@ -5,10 +5,15 @@
     border-style: solid;
     border-color: var(--meta-color);
     border-radius: 0 0 var(--main-radius) var(--main-radius);
-    padding: 20rem;
-    background-color: var(--page-bg-color);
+    padding: 0 var(--page-padding);
+    background-color: var(--tertiary-color);
     position: relative;
-
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50rem;
+    flex-wrap: wrap;
+    font-weight: 400;
+    color: var(--font-color);
 
     &::after {
 
@@ -22,7 +27,7 @@
         bottom: -106rem;
         width: 74rem;
         height: 106rem;
-        background: var(--page-bg-color);
+        background-color: var(--tertiary-color);
 
 
       @include devices(mobile){
@@ -35,17 +40,98 @@
 
     }
 
+  }
 
+
+  %visibility-inline{
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--font-color-inverted);
+    padding: 10rem;
+    border-radius: var(--main-radius);
+    text-align: center;
+    margin-bottom:15rem;
+    &>button>span{
+      @include devices(mobile){
+        display: none;
+      }
+    }
 
   }
 
 
+  %visibility-inline-title{
+    position: absolute;
+    background: var(--font-color-inverted);
+    top:-8rem;
+    left: 8rem;
+    font-size: 14rem;
+    padding: 0 5rem;
+    color: var(--meta-color);
+    border-radius: var(--main-radius);
+    line-height: 1.1;
+  }
+
+
+  .visibility__color{
+    @extend %visibility-inline;
+    &::after{
+      content: 'Цвет';
+      @extend %visibility-inline-title;
+    }
+  }
+
+
+  .visibility__fontsize{
+    @extend %visibility-inline;
+
+
+
+    &::after{
+      content: 'Размер';
+      @extend %visibility-inline-title;
+    }
+  }
+
+
+  .visibility__fontfamily{
+    @extend %visibility-inline;
+    &::after{
+      content: 'Засечки';
+      @extend %visibility-inline-title;
+    }
+  }
+
+  .visibility__fontinterval{
+    @extend %visibility-inline;
+    &::after{
+      content: 'Кернинг';
+      @extend %visibility-inline-title;
+    }
+  }
+
+  .visibility__photo{
+    @extend %visibility-inline;
+    &::after{
+      content: 'Фото';
+      @extend %visibility-inline-title;
+    }
+  }
+
   &__button{
+
+    &:hover{
+      border: 2px dotted var(--meta-color);
+
+    }
+    background: var(--page-bg-color);
     cursor: pointer;
     display: inline-block;
     border: 2px solid var(--meta-color);
     padding: 5rem;
     border-radius: var(--main-radius);
+    white-space: break-spaces;
+    color: var(--font-color);
 
     &.font-interval-smaller{
       letter-spacing: calc(var(--letter-spacing) * 0.1);
@@ -71,36 +157,43 @@
       font-family: Times, serif;
     }
 
+
+    &.color{
+      border: 2px solid transparent;
+      padding: 6rem;
+      &:hover{
+        border: 2px dotted var(--gray-color);
+      }
+    }
+
+    &.color.default-settings{
+      color: #000000;
+      background: linear-gradient(135deg, rgba(179, 212, 255, 0.31) 0%, rgb(249, 251, 255) 100%);
+      font-weight: 400;
+    }
+
     &.color.black-on-white{
       color: #000000;
       background: #ffffff;
       font-weight: 900;
-      border: 1px solid var(--gray-color);
-      padding: 6rem;
     }
 
     &.color.white-on-black{
       color: #ffffff;
       background: #000000;
       font-weight: 900;
-      border: 1px solid var(--gray-color);
-      padding: 6rem;
     }
 
     &.color.navy-on-blue{
       color: #0026b7;
       background: #73efff;
       font-weight: 900;
-      border: 1px solid var(--gray-color);
-      padding: 6rem;
     }
 
     &.color.green-on-brown{
       color: #12b700;
       background: #7e4b27;
       font-weight: 900;
-      border: 1px solid var(--gray-color);
-      padding: 6rem;
 
     }
 
@@ -118,6 +211,10 @@
     text-align: center;
     font-weight: 500;
     font-variant: all-small-caps;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
   }
 
 }
@@ -130,6 +227,7 @@
   width: 34px;
   position: relative;
   bottom: -10rem;
+
   & input {
     display: none;
   }
@@ -142,6 +240,10 @@
     border: 2px solid var(--meta-color);
     border-radius: 5rem;
     transition: .4s;
+
+    &:hover{
+      border: 2px dotted var(--meta-color);
+    }
 
   }
 

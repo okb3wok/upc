@@ -26,8 +26,10 @@
   font-weight: 400;
   background: $bg;
   border-radius: $radius;
+  border: 2px solid $color;
   cursor: pointer;
   transition: background-color .3s ease;
+  text-decoration: var(--link-decoration);
 
   &:hover {
     background: $bghover;

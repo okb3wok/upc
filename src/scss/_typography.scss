@@ -72,6 +72,7 @@ img, svg{
   max-width: 100%;
   height: auto;
   display: block;
+  filter: var(--img-filter);
 }
 
 a {
@@ -81,7 +82,7 @@ a {
 
 
 .upc-button {
-  @include button($color: white, $bg: var(--prime-color), $bghover: var(--secondary-color), $radius:var(--main-radius));
+  @include button($color: var(--font-color), $bg: var(--prime-color), $bghover: var(--secondary-color), $radius:var(--main-radius));
 }
 
 .upc-input {

@@ -2,7 +2,7 @@
   flex: 1 1 auto;
   width:100%;
   padding: 0 var(--page-padding);
-
+  color: var(--font-color);
   @include devices(tablet){
     padding: 0;
   }

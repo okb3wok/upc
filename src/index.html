@@ -233,21 +233,38 @@
 <template id="visibility">
   <div class="visibility">
     <div class="wrapper">
-      <div class="visibility__title">Параметры шрифта, цветов сайта и отображения фото</div>
-      <button class="visibility__button reset-settings">По-уполчанию</button>
-      Размер: <button class="visibility__button font_smaller">- Меньше</button>
-      <button class="visibility__button font_bigger">+ Больше</button>
-      Шрифт:
-      <button class="visibility__button selected font-sans-serif">Без засечек</button>
-      <button class="visibility__button font-serif">С засечками</button>
-      Интервал: <button class="visibility__button font-interval-smaller">Меньше</button>
-      <button class="visibility__button font-interval-bigger">Больше</button>
-      Цвета: <button class="visibility__button color black-on-white chose">Б</button>
+      <div class="visibility__title">Цветовые схемы, настройки шрифта</div>
+
+      <div class="visibility__color" >
+      <button class="visibility__button color default-settings">Норм</button>
+      <button class="visibility__button color black-on-white chose">Б</button>
       <button class="visibility__button color white-on-black">Ч</button>
       <button class="visibility__button color navy-on-blue">Г</button>
       <button class="visibility__button color green-on-brown">К</button>
-      Показывать&nbsp;фото:&nbsp;<label for="img-switcher" title="Показывать фото" class="img-switcher">
-      <input type="checkbox" id="img-switcher" checked ><span></span></label>
+      </div>
+
+      <div class="visibility__fontsize" >
+        <button class="visibility__button font_smaller">-<span> Меньше</span></button>
+        <button class="visibility__button font_bigger">+<span> Больше</span></button>
+      </div>
+
+
+      <div class="visibility__fontfamily" >
+        <button class="visibility__button selected font-sans-serif">Без<span> засечек</span></button>
+        <button class="visibility__button font-serif">С<span> засечками</span></button>
+      </div>
+
+      <div class="visibility__fontinterval" >
+        <button class="visibility__button font-interval-smaller">Мен<span>ьше</span></button>
+        <button class="visibility__button font-interval-bigger">Б о л<span> ь ш е</span></button>
+      </div>
+
+      <div class="visibility__photo" >
+        <label for="img-switcher" title="Показывать фото" class="img-switcher">
+          <input type="checkbox" id="img-switcher" checked ><span></span>
+        </label>
+      </div>
+
     </div>
   </div>
 </template>

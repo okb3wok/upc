@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  text-decoration: var(--link-decoration);
 
   &__item{
     flex: 1 1 auto;
@@ -23,7 +23,7 @@
       height: 100%;
 
       &:hover {
-        box-shadow: 0 0 15px var(--gray-color);
+        box-shadow: 0 0 15px var(--blur-color);
       }
 
 

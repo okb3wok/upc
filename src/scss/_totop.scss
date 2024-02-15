@@ -7,7 +7,7 @@
   cursor:pointer;
   background-color: var(--blur-color);
   border-radius: var(--main-radius);
-  color: var(--page-bg-color);
+  color:var(--font-color);
   position: fixed;
   right: var(--page-padding);
   bottom: 70px;
@@ -19,7 +19,6 @@
 
   & span{
     display: block;
-    padding-bottom: 8px;
   }
 
   &.show {
