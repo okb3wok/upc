@@ -82,7 +82,7 @@ a {
 
 
 .upc-button {
-  @include button($color: var(--font-color), $bg: var(--prime-color), $bghover: var(--secondary-color), $radius:var(--main-radius));
+  @include button($color: var(--button-font-color), $bg: var(--prime-color), $bghover: var(--secondary-color), $radius:var(--main-radius), $bordercolor: var(--button-border-color));
 }
 
 .upc-input {

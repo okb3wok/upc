@@ -1,6 +1,14 @@
 .news {
-  column-count: 3;
+  column-count: 4;
   column-gap: var(--margin-gap-block);
+
+  @include devices(tablet){
+    column-count: 2;
+  }
+
+  @include devices(mobile){
+    column-count: 1;
+  }
 
   &__item{
     margin-bottom: var(--page-padding);
@@ -11,6 +19,7 @@
     & img {
       display: block;
       margin-bottom: 10rem;
+      width: 100%;
     }
 
     &>a {

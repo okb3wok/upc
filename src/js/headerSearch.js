@@ -30,7 +30,7 @@ export default {
         state = store(state, {isSearching:true});
         state = store(state, {isSearchOpen:false});
         headerSearchInput.classList.add('hidden');
-        window.location.replace(state.urlSite +'/?s=' + headerSearchInput.value.replace(' ', '+'));
+        window.location.replace(window.location.origin +'/?s=' + headerSearchInput.value.replace(' ', '+'));
       }else{
         state = store(state, {isSearchOpen:true});
         headerSearchInput.focus();

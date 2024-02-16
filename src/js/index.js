@@ -5,11 +5,17 @@ import menuToggle from './menuToggle.js'
 import themeSwitcher from './themeSwitcher.js'
 import headerSearch from './headerSearch.js'
 import order from './order.js'
+import preloader from './preloader.js'
+
 
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
+    preloader.init();
+
+
+    let state = {};
 
     const store = (state, newPair) => {
         localStorage.upc = JSON.stringify({...state, ...newPair});
@@ -18,13 +24,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
 
-    let state = initialState;
     if(localStorage.upc!== undefined){
         state = JSON.parse(localStorage.upc);
     }else{
+        state = initialState;
         localStorage.upc = JSON.stringify({...state, rehydrated:true});
     }
-
 
 
     toTop.init();

@@ -20,6 +20,8 @@ html, html[theme="default-settings"] {
   --footer-bg: #eff5f9;
   --footer-text-color: #5d5d5d;
   --font-weight: 300;
+  --button-border-color: transparent;
+  --button-font-color: var(--font-color-inverted);
 }
 
 html[theme="black-on-white"] {
@@ -43,6 +45,8 @@ html[theme="black-on-white"] {
   --footer-bg: #ffffff;
   --footer-text-color: #000000;
   --font-weight: 400;
+  --button-border-color:var(--font-color);
+  --button-font-color: var(--font-color);
 }
 
 
@@ -67,6 +71,8 @@ html[theme="white-on-black"] {
   --footer-bg: #000000;
   --footer-text-color: #ffffff;
   --font-weight: 400;
+  --button-border-color:var(--font-color);
+  --button-font-color: var(--font-color);
 }
 
 html[theme="navy-on-blue"] {
@@ -91,6 +97,8 @@ html[theme="navy-on-blue"] {
   --footer-bg: #9dd1ff;
   --footer-text-color: #195183;
   --font-weight: 400;
+  --button-border-color:var(--font-color);
+  --button-font-color: var(--font-color);
 
 }
 
@@ -116,6 +124,8 @@ html[theme="green-on-brown"] {
   --footer-bg: #3b2716;
   --footer-text-color: #a9dd38;
   --font-weight: 400;
+  --button-border-color:var(--font-color);
+  --button-font-color: var(--font-color);
 }
 
 :root {
