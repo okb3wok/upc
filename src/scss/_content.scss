@@ -3,6 +3,8 @@
   width:100%;
   padding: 0 var(--page-padding);
   color: var(--font-color);
+  letter-spacing: var(--letter-spacing);
+
   @include devices(tablet){
     padding: 0;
   }
@@ -10,10 +12,10 @@
 
   &> .wrapper{
     padding: 0;
+    overflow: hidden;
     background: var(--page-bg-color);
-    letter-spacing: var(--letter-spacing);
     border-radius: calc(var(--main-radius) * 5);
-    min-height: 900px;
+
     @include devices(tablet){
       border-radius: 0;
 

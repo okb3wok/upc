@@ -1,3 +1,8 @@
+template {
+  display: none;
+}
+
+
 .visibility{
 
   &>.wrapper {
@@ -14,6 +19,9 @@
     flex-wrap: wrap;
     font-weight: 400;
     color: var(--font-color);
+    line-height: 1.55;
+    font-size: 22rem;
+    letter-spacing: 0.2rem;
 
     &::after {
 
@@ -102,10 +110,18 @@
     }
   }
 
-  .visibility__fontinterval{
+  .visibility__fontkerning{
     @extend %visibility-inline;
     &::after{
       content: 'Кернинг';
+      @extend %visibility-inline-title;
+    }
+  }
+
+  .visibility__fontinterval{
+    @extend %visibility-inline;
+    &::after{
+      content: 'Интервал';
       @extend %visibility-inline-title;
     }
   }
@@ -133,20 +149,20 @@
     white-space: break-spaces;
     color: var(--font-color);
 
-    &.font-interval-smaller{
-      letter-spacing: calc(var(--letter-spacing) * 0.1);
+    &.font-kerning-smaller{
+      letter-spacing: -2rem;
     }
 
-    &.font-interval-bigger{
-      letter-spacing: calc(var(--letter-spacing) * 10);
+    &.font-kerning-bigger{
+      letter-spacing: 2rem;
     }
 
     &.font_smaller{
-      font-size: calc(var(--font-size) * 0.8 );
+      font-size: 18rem;
     }
 
     &.font_bigger{
-      font-size: calc(var(--font-size) * 1.2 );
+      font-size: 26rem;
     }
 
     &.font-sans-serif{

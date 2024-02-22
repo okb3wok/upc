@@ -71,96 +71,58 @@
 
 <div class="content">
   <div class="wrapper">
-    <main class="main">
+    <main id="primary" class="main error-404">
 
-      <h1>Учебно-производственный центр АО «Авиаавтоматика» им. В.В. Тарасова»</h1>
-      <p>Наш учебно-производственный центр производит набор на курсы повышение квалификации рабочих.</p>
-      <h2>Учебные программы</h2>
-      <button class="upc-button" id="orderCourse">Записаться на курсы повышение квалификации</button>
-      <p>Список учебных программ с шифром и названием профессии:</p>
-
-
-      <br>
-      <div class="courses">
-
-        <div class="courses__item">
-          <a href="http://upc/courses/litejjshhik-plastmass/" rel="bookmark" title="Профессия: Литейщик пластмасс. Шифр: 13399">
-            <img src="http://upc/wp-content/uploads/2024/02/litejshik-480x320.jpg" alt="">
-            <header><span class="courses__item-title">
-                  Литейщик пластмасс</span><br>
-              <span class="courses__item-cod">13399</span>
-            </header>
-          </a>
-        </div>
-        <div class="courses__item">
-          <a href="http://upc/courses/tokar/" rel="bookmark" title="Профессия: Токарь. Шифр: 19149">
-            <img src="http://upc/wp-content/uploads/2024/02/tokar-480x320.jpg" alt="">
-            <header><span class="courses__item-title">
-                  Токарь</span><br>
-              <span class="courses__item-cod">19149</span>
-            </header>
-          </a>
-        </div>
-        <div class="courses__item">
-          <a href="http://upc/courses/payalshhik-radiodetalejj/" rel="bookmark" title="Профессия: Паяльщик радиодеталей. Шифр: 16464">
-            <img src="http://upc/wp-content/uploads/2024/02/payalshik-480x320.jpg" alt="">
-            <header><span class="courses__item-title">
-                  Паяльщик радиодеталей</span><br>
-              <span class="courses__item-cod">16464</span>
-            </header>
-          </a>
-        </div>
-        <div class="courses__item">
-          <a href="http://upc/courses/ispytatel-detalejj-i-priborov/" rel="bookmark" title="Профессия: Испытатель деталей и приборов. Шифр: 12582">
-            <img src="http://upc/wp-content/uploads/2024/02/ispytatel-480x320.jpg" alt="">
-            <header><span class="courses__item-title">
-                  Испытатель деталей и приборов</span><br>
-              <span class="courses__item-cod">12582</span>
-            </header>
-          </a>
-        </div>
-        <div class="courses__item">
-          <a href="http://upc/courses/galvanik/" rel="bookmark" title="Профессия: Гальваник. Шифр: 11629">
-            <img src="http://upc/wp-content/uploads/2024/02/galvanik-480x320.jpg" alt="">
-            <header><span class="courses__item-title">
-                  Гальваник</span><br>
-              <span class="courses__item-cod">11629</span>
-            </header>
-          </a>
-        </div>
-      </div>
-
-
-      <h2>О центре</h2>
-      <img src="http://upc/wp-content/uploads/2024/02/about-aviaavtomatika-480x360.jpg" alt="О центре" style="display: block; float: left; margin-right: 30rem; margin-bottom: 10rem;">
-      Здесь все нужно исправить
+      <section class="not-found">
+        <header class="page-header">
+          <h1 class="page-title">Запрашиваемая страница не найдена</h1>
+        </header><!-- .page-header -->
 
 
 
-      В феврале 2019 года в Акционерном обществе «Карачевский завод «Электродеталь» создан учебно-производственный центр (далее – УПЦ, Центр) Основная функция Центра – осуществление образовательной деятельности по реализации программ профессиональной подготовки рабочих и дополнительных профессиональных  программ повышения квалификации руководителей. специалистов и служащих.
+        <div class="page-content">
+          <p>Скорее всего, запрашиваемый материал был перемещен в другой раздел. Перейдите на <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>">главную страницу сайта</a>, или воспользуйтесь поиском:</p>
 
-      Основная цель деятельности учебно-производственного центра – организация процессов обучения, развития, оценки и аттестации персонала для обеспечения долгосрочной конкурентоспособности Общества на основе формирования и поддержания необходимого уровня квалификации персонала, развития его профессиональных компетенций, обеспечения накопления и передачи знаний внутри Общества.
+          <form role="search" method="get" class="upc-search-form" action="http://upc/">
+            <input type="search" placeholder="Поиск…" value="" name="s">
+            <input type="submit" value="Поиск">
+          </form>
 
-      Миссия Центра — совершенствование системы обучения персонала, обеспечивающей непрерывное повышение квалификации кадров АО «Карачевский завод «Электродеталь», формирование у обучающихся современных компетенций, необходимых для разработки и производства конкурентоспособной высокотехнологичной продукции.
 
-      Основные задачи Центра:
+          <?php
+					//get_search_form();
 
-      Оказание образовательных услуг в сфере дополнительного профессионального образования, профессионального обучения, в том числе, на возмездной основе.
-      Организация учебного процесса в соответствии с Федеральным законом от 29.12.2012 №273-ФЗ «Об образовании в Российской Федерации».
-      Организация и проведение повышения квалификации и профессиональной переподготовки специалистов и руководителей предприятий (объединений) и учреждений.
-      Оказание консультативных, информационных и иных услуг по вопросам, связанным с обучением, профессиональной подготовкой, переподготовкой и повышением квалификации.
-      Повышение профессиональных знаний специалистов Общества, совершенствование их деловых качеств, подготовка их к выполнению новых трудовых функций, удовлетворение потребности специалистов в получении знаний о новейших достижениях в соответствующих отраслях и техники, передовом опыте, в том числе и зарубежном.
-      Организация и проведение подготовки, переподготовки, обучения вторым (смежным) профессиям и повышения квалификации рабочих по направлениям производства.
-      Привлечение ведущих специалистов Общества и сторонних организаций в качестве преподавателей (наставников, консультантов) для обеспечения процесса обучения в Обществе.
-      Организация и контроль процесса обучения (формирование учебных групп, составление расписания и т.д.).
-      Обеспечение слушателей нормативно-методической литературой и информационными материалами.
-      Ведение учебно-методической, организационно-хозяйственной и иной деятельности по обеспечению учебного процесса.
+					the_widget( 'WP_Widget_Recent_Posts' );
+					?>
 
-      Примечание: учебно-методическая база Центра не предусматривает обучение слушателей с инвалидностью и ограниченными возможностями здоровья.
-      <!--        <header>-->
-      <!--          <h1 class="page-title screen-reader-text">--><!--</h1>-->
-      <!--        </header>-->
-      <!--      -->
+          <div class="widget widget_categories">
+            <h2 class="widget-title">Категории</h2>
+            <ul>
+              <?php
+							wp_list_categories(
+								array(
+									'orderby'    => 'count',
+              'order'      => 'DESC',
+              'show_count' => 1,
+              'title_li'   => '',
+              'number'     => 10,
+              )
+              );
+              ?>
+            </ul>
+          </div><!-- .widget -->
+
+          <?php
+					/* translators: %1$s: smiley */
+					//$hstr_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'hstr' ), convert_smilies( ':)' ) ) . '</p>';
+          //the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$hstr_archive_content" );
+
+          //the_widget( 'WP_Widget_Tag_Cloud' );
+          ?>
+
+        </div><!-- .page-content -->
+      </section><!-- .error-404 -->
+
     </main><!-- #main -->
 
   </div> <!--/wrapper-->
@@ -261,9 +223,14 @@
         <button class="visibility__button font-serif">С<span> засечками</span></button>
       </div>
 
+      <div class="visibility__fontkerning" >
+        <button class="visibility__button font-kerning-smaller">Мен<span>ьше</span></button>
+        <button class="visibility__button font-kerning-bigger">Б о л<span> ь ш е</span></button>
+      </div>
+
       <div class="visibility__fontinterval" >
-        <button class="visibility__button font-interval-smaller">Мен<span>ьше</span></button>
-        <button class="visibility__button font-interval-bigger">Б о л<span> ь ш е</span></button>
+        <button class="visibility__button font-interval-smaller">///</button>
+        <button class="visibility__button font-interval-bigger">/ / /</button>
       </div>
 
       <div class="visibility__photo" >

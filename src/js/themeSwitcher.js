@@ -1,5 +1,6 @@
 export default {
-  init(state,store) {
+
+  init(store) {
 
     let themeSwitcher = document.getElementById('theme-switcher');
 
@@ -16,23 +17,24 @@ export default {
       return;
     }
 
-    if(state.theme !==undefined){
-      document.documentElement.setAttribute('theme', state.theme);
 
-      if(state.theme ==='default-settings' || state.theme ==='no-preference'){
+    let theme = store.getState('theme');
+
+    if( theme!==undefined){
+      document.documentElement.setAttribute('theme', theme);
+
+      if(theme ==='default-settings' || theme ==='no-preference'){
 
       }else {
         deleteGradient();
       }
     }
 
-    themeSwitcher.addEventListener('click', ()=>{
 
+    themeSwitcher.addEventListener('click', ()=>{
 
       if(document.querySelectorAll(".visibility").length < 1){
 
-
-        let theme = 'default-settings'; //Тема по умолчанию
 
         const visibilityTemplate = document.querySelector("#visibility");
         const clone = visibilityTemplate.content.cloneNode(true);
@@ -59,29 +61,35 @@ export default {
 
         const handlerVisibility = (el) => {
 
+          console.log(el.target.parentElement);
+
           let content = document.querySelector('.body');
           const fontSize = getComputedStyle(content).getPropertyValue("--font-size");
-          const fontInterval = getComputedStyle(content).getPropertyValue("--letter-spacing");
-
+          const fontKerning = getComputedStyle(content).getPropertyValue("--letter-spacing");
+          const fontInterval = getComputedStyle(content).getPropertyValue("--line-height");
           // let html = document.documentElement;
           // html.style.fontSize = parseInt(getComputedStyle(html, '').fontSize) + 1 + 'px';
           // console.log(getComputedStyle(html).fontSize);
 
 
-          //TODO переписать с switch
 
-          if(el.target.classList.contains('font_smaller')){
+
+          if(el.target.classList.contains('font_smaller') || el.target.parentElement.classList.contains('font_smaller')){
             content.style.setProperty("--font-size", 'calc(' + fontSize + ' * 0.8)');
-          }else if(el.target.classList.contains('font_bigger')){
+          }else if(el.target.classList.contains('font_bigger') || el.target.parentElement.classList.contains('font_bigger')){
             content.style.setProperty("--font-size", 'calc(' + fontSize + ' * 1.2)');
-          }else if(el.target.classList.contains('font-sans-serif')){
+          }else if(el.target.classList.contains('font-sans-serif') || el.target.parentElement.classList.contains('font-sans-serif')){
             content.style.setProperty("--font-family", 'Roboto');
-          }else if(el.target.classList.contains('font-serif')){
+          }else if(el.target.classList.contains('font-serif') || el.target.parentElement.classList.contains('font-serif')){
             content.style.setProperty("--font-family", 'Times');
-          }else if(el.target.classList.contains('font-interval-smaller')){
-            content.style.setProperty("--letter-spacing", 'calc(' + fontInterval + ' * 0.1)');
-          }else if(el.target.classList.contains('font-interval-bigger')){
-            content.style.setProperty("--letter-spacing", 'calc(' + fontInterval + ' * 2)');
+          }else if(el.target.classList.contains('font-kerning-smaller') || el.target.parentElement.classList.contains('font-kerning-smaller')){
+            content.style.setProperty("--letter-spacing", 'calc(' + fontKerning + ' * 0.1)');
+          }else if(el.target.classList.contains('font-kerning-bigger') || el.target.parentElement.classList.contains('font-kerning-bigger')){
+            content.style.setProperty("--letter-spacing", 'calc(' + fontKerning + ' * 2)');
+          }else if(el.target.classList.contains('font-interval-smaller') || el.target.parentElement.classList.contains('font-interval-smaller')){
+            content.style.setProperty("--line-height", 'calc(' + fontInterval + ' * 0.1)');
+          }else if(el.target.classList.contains('font-interval-bigger') || el.target.parentElement.classList.contains('font-interval-bigger')){
+            content.style.setProperty("--line-height", 'calc(' + fontInterval + ' * 2)');
           }
 
           if(el.target.classList.contains('color')){
@@ -113,11 +121,9 @@ export default {
               el.target.classList.add('chose');
             }
 
-            state = store(state, {theme:theme});
+            store.setState('theme', theme);
             document.documentElement.setAttribute('theme', theme);
-
           }
-
 
 
         }

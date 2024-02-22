@@ -1,0 +1,15 @@
+.ie{
+
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  &__wrapper{
+    border: 1px solid red;
+    padding: var(--page-padding);
+    color: red;
+    font-size: 24rem;
+    font-weight: bold;
+    border-radius: var(--main-radius);
+  }
+
+}

@@ -13,7 +13,7 @@
     text-align: center;
     display: block;
     font-weight: 500;
-
+    line-height: 1.55;
     @include devices(tablet){
       max-width: 160rem;
     }
@@ -36,7 +36,8 @@
 
     &__title{
       white-space: nowrap;
-      line-height: calc(var(--line-height) * 0.6);
+
+      line-height: 1;
       font-size: 15rem;
 
       @include devices(tablet){

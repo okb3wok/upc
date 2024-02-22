@@ -1,7 +1,7 @@
 
 
 export default {
-  init(state, store){
+  init(store){
 
     let headerSearchButton = document.getElementById('header-search-button');
 
@@ -10,60 +10,61 @@ export default {
       return;
     }
 
-
-
     let headerSearchInput = document.getElementById('header-search-input');
 
-    state = store(state, {isSearchOpen:false});
+    store.setState('isSearching',false);
+
+    let searchingText = store.getState('searchingText');
 
     headerSearchButton.addEventListener('click', ()=>{
 
       headerSearchInput.classList.remove('hidden');
 
-      if(state.searchingText !==undefined){
-        headerSearchInput.value = state.searchingText;
+      if(searchingText !==undefined){
+        headerSearchInput.value = searchingText;
       }
 
-      state = store(state, {isSearching:false});
+      if(store.getState('isSearchOpen')){
 
-      if(state.isSearchOpen){
-        state = store(state, {isSearching:true});
-        state = store(state, {isSearchOpen:false});
+        store.setState('isSearching',true);
+        store.setState('isSearchOpen',false);
         headerSearchInput.classList.add('hidden');
-        window.location.replace(window.location.origin +'/?s=' + headerSearchInput.value.replace(' ', '+'));
+        window.location.href = window.origin +'/?s=' + headerSearchInput.value;
+         // window.location.replace(window.location.origin +'/?s=' + headerSearchInput.value.replace(' ', '+'));
       }else{
-        state = store(state, {isSearchOpen:true});
+        store.setState('isSearchOpen',true);
+
         headerSearchInput.focus();
         document.body.addEventListener('click',(el)=>{
           if(headerSearchInput.contains(el.target) || headerSearchButton.contains(el.target)){
           }else{
-            state = store(state, {isSearchOpen:false});
+            store.setState('isSearchOpen',false);
             headerSearchInput.classList.add('hidden');
           }
         });
       }
 
       headerSearchInput.addEventListener('input',()=>{
-        state = store(state, {searchingText:headerSearchInput.value}); //.replace(/"/g, '&quot;').replace(/'/g, '&apos;')
+        store.setState('searchingText',headerSearchInput.value);
+         //.replace(/"/g, '&quot;').replace(/'/g, '&apos;')
       });
 
       headerSearchInput.addEventListener('keydown',(event)=>{
         if(event.key === 'Enter'){
-          state = store(state, {isSearching:true});
-          state = store(state, {isSearchOpen:false});
+          store.setState('isSearching',true);
+          store.setState('isSearchOpen',false);
           headerSearchInput.classList.add('hidden');
-          window.location.replace(state.urlSite +'/?s=' + headerSearchInput.value.replace(' ', '+'));
+          window.location.href = window.origin +'/?s=' + headerSearchInput.value;
         }
 
         if(event.key === 'Escape'){
           headerSearchInput.classList.add('hidden');
-          state = store(state, {isSearching:false});
-          state = store(state, {isSearchOpen:false});
+          store.setState('isSearching',false);
+          store.setState('isSearchOpen',false);
         }
       });
 
-
-       if(window.innerWidth < state.mobileWidth){
+       if(window.innerWidth < store.getState('mobileWidth')){
          headerSearchInput.style.width = document.querySelector('header>.wrapper').clientWidth - 145 + 'px';
        }else{
          headerSearchInput.style.width = document.querySelector('header>.wrapper').clientWidth - document.querySelector('.header-branding').clientWidth - 145 + 'px';
