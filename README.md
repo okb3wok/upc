@@ -33,6 +33,7 @@ npm run build
 │ ├── js                 - JavaScript files
 | ├─┬ static             - Other files
 | | └── favicon          - Favicons set
+│ ├── vendor             - Side scripts and files
 │ └── index.html         - HTML frontend development file
 ├── package.json         - Settings for Node.js
 ├── webpack.dev.js       - Development settings for Webpack
