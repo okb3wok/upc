@@ -82,7 +82,11 @@ export default {
 
         let imgSwitcher = document.getElementById('img-switcher');
 
-        imgSwitcher.checked=store.getState('photo')?store.getState('photo'):!store.getState('photo');
+        imgSwitcher.checked=false;
+
+        if(store.getState('photo')){
+          imgSwitcher.checked=true;
+        }
 
         imgSwitcher.addEventListener('change', ()=>{
           let images = document.querySelectorAll('img');
