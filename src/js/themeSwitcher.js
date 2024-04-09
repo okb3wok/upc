@@ -69,16 +69,12 @@ export default {
         el.style.display='none';
       })
     }
-
     themeSwitcher.addEventListener('click', ()=>{
 
       if(document.querySelectorAll(".visibility").length < 1){
-
-
         const visibilityTemplate = document.querySelector("#visibility");
         const clone = visibilityTemplate.content.cloneNode(true);
         document.body.prepend(clone);
-
 
         let imgSwitcher = document.getElementById('img-switcher');
 
@@ -108,11 +104,7 @@ export default {
 
         let colorButtons = document.querySelectorAll('.visibility__button.color');
 
-
-
         const handlerVisibility = (el) => {
-
-
 
 
           const fontKerning = getComputedStyle(content).getPropertyValue("--letter-spacing");
@@ -122,9 +114,6 @@ export default {
           // console.log(getComputedStyle(html).fontSize);
 
           const fontSize = getComputedStyle(content).getPropertyValue("--font-size");
-
-
-
 
           if(el.target.classList.contains('font_smaller') || el.target.parentElement.classList.contains('font_smaller')){
             content.style.setProperty("--font-size", 'calc(' + fontSize + ' * 0.8)');
@@ -156,7 +145,6 @@ export default {
 
             colorButtons.forEach((el)=>{
               el.classList.remove('chose');
-
               deleteGradient();
             })
 
@@ -167,6 +155,9 @@ export default {
               document.querySelector('.bubble2').style.display = 'block';
               document.querySelector('.header-branding__logo svg :nth-child(2) path').style.fill='url(#gradient1)';
               document.querySelector('.header-branding__logo svg :nth-child(3) path').style.fill='url(#gradient2)';
+              store.resetState();
+              location.reload();
+
             }else if(el.target.classList.contains('black-on-white')){
               theme = 'black-on-white';
               el.target.classList.add('chose');

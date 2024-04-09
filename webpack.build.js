@@ -11,6 +11,7 @@ module.exports = {
   output: {
     clean: true,
     path: path.resolve(__dirname, 'build'),
+    //filename: 'assets/upc[fullhash:6].js',
     filename: 'assets/upc.js',
     assetModuleFilename: '[name][ext]'
   },

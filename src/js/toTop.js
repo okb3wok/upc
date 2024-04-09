@@ -5,7 +5,7 @@ export default {
     const toTop = document.getElementById('totop');
 
     if (!toTop) {
-      console.log('Нет элемента ToTop');
+      console.log('[Нет элемента ToTop]');
       return;
     }
 

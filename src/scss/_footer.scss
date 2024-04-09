@@ -7,6 +7,26 @@
     border-style: solid;
     border-color: #eaeff5;
     color: var(--footer-text-color);
+    position: relative;
+    overflow: hidden;
+
+
+    //&::after{
+    //    content: '';
+    //    visibility: visible;
+    //    width: 100vw;
+    //    height: 150vh;
+    //    position: absolute;
+    //    right: 0;
+    //    top: 0;
+    //    border-radius: 50%;
+    //
+    //    background: radial-gradient(50% 50% at 50% 50%, #b005f3 0,var(--footer-bg) 100%),var(--footer-bg);
+    //    opacity: .05;
+    //    margin-right: -30%;
+    //    margin-top: -30%;
+    //
+    //}
 
     @include devices(tablet){
         margin-top: 0;
@@ -19,11 +39,11 @@
         @include devices(mobile){
             flex-direction: column-reverse;
         }
+        position: relative;
     }
 
     &-main{
         flex: 1 1 auto;
-
     }
 
     &-aside{
@@ -33,9 +53,7 @@
 
 
     &__vk {
-
         display: inline-block;
-
         &:hover svg rect {
             display: inline-block;
             fill: var(--prime-color);

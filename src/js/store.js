@@ -2,13 +2,14 @@ import { initialState } from './initialState.js'
 
 
 const store = {
+  initState: initialState,
   state: initialState,
   init(){
-    if(localStorage.upc!== undefined) {
-      this.state = JSON.parse(localStorage.upc);
+    if(localStorage.upc2!== undefined) {
+      this.state = JSON.parse(localStorage.upc2);
       this.setState('rehydrated',true);
     }else{
-      localStorage.upc = JSON.stringify(this.state);
+      localStorage.upc2 = JSON.stringify(this.state);
     }
   },
   getState(key) {
@@ -16,8 +17,17 @@ const store = {
   },
   setState(key, value) {
     this.state[key] = value;
-    localStorage.upc = JSON.stringify(this.state);
-    console.log(this.state);
+    localStorage.upc2 = JSON.stringify(this.state);
+
+  },
+  resetState(){
+    console.log('resetState')
+    console.log(this.initState)
+    console.log(this.state)
+    for (var key in this.initState) {
+      this.setState(key, this.initState[key])
+    }
+
   }
 }
 
