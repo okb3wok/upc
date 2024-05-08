@@ -9,6 +9,11 @@
     padding: 0;
   }
 
+  & ul{
+    list-style: inside;
+    list-style-type: disc;
+  }
+
 
   &> .wrapper{
     padding: 0;

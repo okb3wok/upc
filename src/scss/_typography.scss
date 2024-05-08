@@ -6,6 +6,13 @@ dd, ol, ul{
   margin-bottom: var(--font-size);
 }
 
+ol{
+  list-style: inside;
+  list-style-type:decimal;
+}
+
+
+
 
 p {
   margin-bottom: var(--font-size);

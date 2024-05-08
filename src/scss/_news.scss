@@ -1,20 +1,27 @@
 .news {
-  column-count: 4;
-  column-gap: var(--margin-gap-block);
-
-  @include devices(tablet){
-    column-count: 2;
-  }
-
-  @include devices(mobile){
-    column-count: 1;
-  }
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
 
   &__item{
     margin-bottom: var(--page-padding);
 
     display: inline-block;
-    width: 100%;
+    width: 24%;
+
+
+    @include devices(tablet){
+      width: 49%;
+    }
+
+    @include devices(mobile){
+      width: 100%;
+    }
+
 
     & img {
       display: block;

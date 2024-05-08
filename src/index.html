@@ -71,59 +71,45 @@
 
 <div class="content">
   <div class="wrapper">
-    <main id="primary" class="main error-404">
-
-      <section class="not-found">
-        <header class="page-header">
-          <h1 class="page-title">Запрашиваемая страница не найдена</h1>
-        </header><!-- .page-header -->
+    <main class="main">
 
 
-
-        <div class="page-content">
-          <p>Скорее всего, запрашиваемый материал был перемещен в другой раздел. Перейдите на <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>">главную страницу сайта</a>, или воспользуйтесь поиском:</p>
-
-          <form role="search" method="get" class="upc-search-form" action="http://upc/">
-            <input type="search" placeholder="Поиск…" value="" name="s">
-            <input type="submit" value="Поиск">
-          </form>
+      <article id="post-239" class="post-239 page type-page status-publish hentry">
+        <header class="entry-header">
+          <h1 class="entry-title">Контакты</h1>	</header><!-- .entry-header -->
 
 
-          <?php
-					//get_search_form();
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
 
-          <div class="widget widget_categories">
-            <h2 class="widget-title">Категории</h2>
-            <ul>
-              <?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-              'order'      => 'DESC',
-              'show_count' => 1,
-              'title_li'   => '',
-              'number'     => 10,
-              )
-              );
-              ?>
-            </ul>
-          </div><!-- .widget -->
 
-          <?php
-					/* translators: %1$s: smiley */
-					//$hstr_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'hstr' ), convert_smilies( ':)' ) ) . '</p>';
-          //the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$hstr_archive_content" );
 
-          //the_widget( 'WP_Widget_Tag_Cloud' );
-          ?>
+        <div class="entry-content">
 
-        </div><!-- .page-content -->
-      </section><!-- .error-404 -->
+          <div class="contacts-list">
+            <div class="contacts-item"><strong>Наименование структурного подразделения:</strong></div>
+            <div class="contacts-item">Учебно-производственный центр</div>
+            <div class="contacts-item"><strong>Информация о работниках структурного подразделения:</strong></div>
+            <div class="contacts-item">Куркина Марина Петровна - начальник учебно-производственного центра,<br>
+              Сколодова Алина Игоревна - специалист по обучению и развитию персонала
+            </div>
+            <div class="contacts-item"><strong>Местонахождение структурного подразделения:</strong></div>
+            <div class="contacts-item">305040, г. Курск, ул. Запольная, д. 47</div>
+            <div class="contacts-item"><strong>Контактный телефон:</strong></div>
+            <div class="contacts-item">8(4712) 72-24-11 доб. 3428, (3280)</div>
+            <div class="contacts-item"><strong>График работы:</strong></div>
+            <div class="contacts-item">Понедельник-пятница с 08.00-17.00<br>
+              Перерыв с 12:30-13:15<br>
+              Суббота, Воскресенье - выходной
+            </div>
+          </div>
 
-    </main><!-- #main -->
+        </div><!-- .entry-content -->
+
+        <footer class="entry-footer">
+          <span class="edit-link"><a class="post-edit-link" href="https://upc.aviaavtomatika.ru/wp-admin/post.php?post=239&amp;action=edit">Edit <span class="screen-reader-text">Контакты</span></a></span>		</footer><!-- .entry-footer -->
+      </article><!-- #post-239 -->
+
+    </main>
 
   </div> <!--/wrapper-->
 </div>

@@ -1,0 +1,26 @@
+.contacts-list{
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts-item{
+  flex: 1 1 50%;
+  padding: 20rem 0;
+
+  @include devices(mobile){
+    flex: 1 1 100%;
+    padding: 0;
+  }
+}
+
+
+
+.contacts-item:nth-child(2n+1){
+  flex: 1 1 29%;
+
+  @include devices(mobile){
+    flex: 1 1 100%;
+    padding-top: 20rem;
+  }
+}

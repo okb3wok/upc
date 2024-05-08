@@ -75,6 +75,9 @@
   height: 100%;
   align-items: center;
   line-height:1;
+  @include  devices(mobile){
+    margin: 0;
+  }
 }
 
 .menu-item{
@@ -86,10 +89,12 @@
   @include devices(tablet){
     padding: 0;
     font-size: 18rem;
+
   }
 
   @include  devices(mobile){
     min-width: 200rem;
+    margin-bottom: 20px;
   }
 
   font-weight: 500;
