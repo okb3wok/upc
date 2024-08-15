@@ -75,7 +75,7 @@ export default {
           }
         };
 
-        requestAPI('http://upc/wp-content/themes/upc/api.php','POST',payload).then(
+        requestAPI('https://upc.aviaavtomatika.ru/wp-content/themes/upc/api.php','POST',payload).then(
           (result) => {
             if(result.result){
               msg = '<i style="color: green;">' + result.status + '</i>';
