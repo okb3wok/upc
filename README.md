@@ -1,6 +1,8 @@
 # About
 Training and Production Center Site
 
+[![Screen](https://raw.githubusercontent.com/okb3wok/upc/master/screen.png)](https://upc.aviaavtomatika.ru/)
+
 
 ## Getting started
 
